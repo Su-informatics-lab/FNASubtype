@@ -7,3 +7,5 @@ Maintainer: #TODO# <yourself@somewhere.net>
 Description: #TODO#
 License: #TODO#
 Encoding: UTF-8
+Suggests:
+   testthat
