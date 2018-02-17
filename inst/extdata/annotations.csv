@@ -1,0 +1,20 @@
+probe.id,Ensembl.ID,Gene.Name,Gene.Annotation,Gene.Selection
+203074_at,ENSG00000073282.11,TP63,209863_s_at|TP63|Tumor protein p63,Top S
+209351_at,ENSG00000186847.5,KRT14,209351_at|KRT14|Keratin 14,S-tier 2
+214580_x_at,ENSG00000103534.15,TMC5,219580_s_at|TMC5|Transmembrane channel-like 5,Top A
+217272_s_at,ENSG00000264230.6,ANXA8L2,203074_at|ANXA8L2|Annexin A8-like 2,S-tier 2
+221854_at,ENSG00000186081.10,KRT5,201820_at|KRT5|Keratin 5,Top S
+201925_s_at,ENSG00000240694.7,PNMA2,209598_at|PNMA2|Paraneoplastic antigen MA2,Top A
+206239_s_at,ENSG00000069122.17,GPR116,212950_at|GPR116|G protein-coupled receptor 116,Top A
+207847_s_at,ENSG00000185499.15,MUC1,"207847_s_at|MUC1|Mucin 1, cell surface associated",Top A
+209598_at,ENSG00000206075.12,SERPINB13,"217272_s_at|SERPINB13|Serpin peptidase inhibitor, clade B (ovalbumin), member 13",S-tier 2
+211024_s_at,ENSG00000019549.7,SNAI2,213139_at|SNAI2|Snail homolog 2 (Drosophila),Top S
+212950_at,ENSG00000136352.16,NKX2-1,211024_s_at|NKX2-1|NK2 homeobox 1,Top A
+219580_s_at,ENSG00000205420.9,KRT6A,214580_x_at|KRT6A|Keratin 6A,S-tier 2
+201820_at,ENSG00000196352.12,CD55,"201925_s_at|CD55|CD55 molecule, decay accelerating factor for complement (Cromer blood group)",Top A
+209863_s_at,ENSG00000081277.10,PKP1,221854_at|PKP1|Plakophilin 1 (ectodermal dysplasia/skin fragility syndrome),S-tier 2
+213139_at,ENSG00000164266.9,SPINK1,"206239_s_at|SPINK1|Serine peptidase inhibitor, Kazal type 1",Top A
+200801_x_at,,ACTB,"200801_x_at|ACTB|Actin, beta",HK4/6
+208695_s_at,,RPL39,208695_s_at|RPL39|Ribosomal protein L39,HK4/6
+212869_x_at,,TPT1,"212869_x_at|TPT1|Tumor protein, translationally-controlled 1",HK4/6
+213583_x_at,,EEF1A1,213583_x_at|EEF1A1|Eukaryotic translation elongation factor 1 alpha 1,HK4/6
