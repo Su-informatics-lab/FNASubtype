@@ -1,5 +1,5 @@
 substituteZeroExpressions <- function(expr) {
-   # TODO: Where does this expression come from?
+   ## If any gene expressions are 0, replace them.
    replacementValue <- log(min(expr[expr > 0]) / 2, base=2)
    expr[expr == 0] <- replacementValue 
 
@@ -11,4 +11,17 @@ getHousekeepingGeneExpressions <- function(expr) {
    hkGeneIds <- hkg$probe.id
 
    expr[match(hkGeneIds, rownames(expr)), ]
+}
+
+
+normalizeData <- function(expr) {
+   expr <- substituteZeroExpressions(expr)
+
+   housekeepingExpressions <- getHousekeepingGeneExpressions(expr)
+
+   ## Normalize all of the genes by the mean housekeeping expression
+   normalizationFactor <- mean(as.matrix(housekeepingExpressions))
+   expr <- expr / normalizationFactor
+
+   expr
 }

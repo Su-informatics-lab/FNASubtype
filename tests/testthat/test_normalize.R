@@ -29,3 +29,28 @@ test_that("housekeeping genes expressions correctly extracted", {
    ## or just a portion
    expect_equal(sum(expr), 345.29)
 })
+
+
+
+## Data Normalization
+
+test_that("normalize data does not change structure of input data", {
+   load(system.file(file.path('testdata', 'expressions.rda'), package=.PACKAGE_NAME))
+
+   before <- expr
+   after <- normalizeData(expr)
+
+   expect_equal(nrow(after), nrow(before))
+   expect_equal(ncol(after), ncol(before))
+   expect_equal(rownames(after), rownames(before))
+   expect_equal(colnames(after), colnames(before))
+})
+
+test_that("normalize data produces the correct result", {
+   load(system.file(file.path('testdata', 'expressions.rda'), package=.PACKAGE_NAME))
+
+   expr <- normalizeData(expr)
+
+   ## Checksum
+   expect_equal(sum(expr), 35.0319, tolerance=1e-4)
+})
