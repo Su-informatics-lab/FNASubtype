@@ -24,6 +24,21 @@ test_that("coefficient rows 2:16 are not blank", {
 })
 
 
+# Helper Functions
+
+test_that("get target genes returns correct gene list", {
+   expected <- c(
+      '203074_at', '209351_at', '214580_x_at', '217272_s_at', '221854_at',
+      '201925_s_at', '206239_s_at', '207847_s_at', '209598_at', '211024_s_at',
+      '212950_at', '219580_s_at', '201820_at', '209863_s_at', '213139_at'
+   )
+
+   actual <- getTargetGenes()
+
+   expect_equal(actual, expected)
+})
+
+
 # Annotation Data
 
 test_that("annotation data is a 19x5 data frame", {

@@ -7,6 +7,13 @@ getCoefficients <- function() {
    get(varName)
 }
 
+getTargetGenes <- function() {
+   geneCoefficients <- getCoefficients()
+   geneNames <- rownames(geneCoefficients)[-1]
+
+   geneNames
+}
+
 getAnnotations <- function() {
    filepath <- system.file("extdata", 'annotations.csv', package=.PACKAGE_NAME)
 
