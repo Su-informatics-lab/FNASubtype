@@ -52,5 +52,5 @@ test_that("normalize data produces the correct result", {
    expr <- normalizeData(expr)
 
    ## Checksum
-   expect_equal(sum(expr), 35.0319, tolerance=1e-4)
+   expect_equal(sum(expr), 78.1205, tolerance=1e-4)
 })
