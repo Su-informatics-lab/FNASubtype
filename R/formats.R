@@ -3,3 +3,13 @@ loadCsvData <- function(filename, sep=',', geneColumn='GeneID') {
 
    data
 }
+
+
+loadGctData <- function(filename) {
+   data <- read.delim(filename, skip=2, row.names='NAME')
+
+   ## Drop the "Description" column
+   data <- data[, -1]
+
+   data
+}

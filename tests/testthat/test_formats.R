@@ -31,3 +31,35 @@ test_that("CSV file header labels retained as column names", {
 
    expect_equal(colnames(data), expected)
 })
+
+
+# GCT Files
+
+test_that("GCT file loads Name column as row names", {
+   gctfile <- system.file(file.path('testdata', 'sample.gct'), package=.PACKAGE_NAME)
+
+   data <- loadGctData(gctfile)
+
+   expected <- c(
+      '200801_x_at', '208695_s_at', '212869_x_at', '213583_x_at', '219795_at',
+      '209800_at', 'POS_A', '203074_at', '209351_at', '214580_x_at',
+      '217272_s_at', '221854_at', '201925_s_at', '206239_s_at', '207847_s_at',
+      '209598_at', '211024_s_at', '212950_at', '219580_s_at', '201820_at',
+      '209863_s_at', '213139_at'
+   )
+
+   expect_equal(rownames(data), expected)
+})
+
+test_that("GCT file loads subject names correctly", {
+   gctfile <- system.file(file.path('testdata', 'sample.gct'), package=.PACKAGE_NAME)
+
+   data <- loadGctData(gctfile)
+
+   expected <- c(
+      'SuZKB', 'LpO3F', 'oNPzf', 'huWrt', 'Q8f1b',
+      'vITSC', 'CYZKk', 'Hen6P', 'lA4Aq', 'F219O'
+   )
+
+   expect_equal(colnames(data), expected)
+})
