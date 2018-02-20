@@ -17,7 +17,7 @@ getTargetGenes <- function() {
 getAnnotations <- function() {
    filepath <- system.file("extdata", 'annotations.csv', package=.PACKAGE_NAME)
 
-   read.csv(filepath)
+   read.csv(filepath, stringsAsFactors=F)
 }
 
 getHousekeepingGenes <- function() {

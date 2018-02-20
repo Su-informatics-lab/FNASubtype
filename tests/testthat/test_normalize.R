@@ -54,3 +54,40 @@ test_that("normalize data produces the correct result", {
    ## Checksum
    expect_equal(sum(expr), 78.1205, tolerance=1e-4)
 })
+
+
+## Gene Normalization: Ensemble ID to Gene Name
+
+test_that("normalizing ensemble genes converts recognized Ensemble IDs", {
+   ensembl <- loadCsvData(system.file(file.path('testdata', 'sample-ensembl.csv'), package=.PACKAGE_NAME))
+
+   expected <- c(
+      'ACTB', 'RPL39', 'TPT1', 'EEF1A1', 
+      'ENSG00000268104.2', 'ENSG00000186832.7', 'ENSG12345789012.3',
+      'TP63', 'KRT14', 'TMC5', 'ANXA8L2', 'KRT5', 'PNMA2',
+      'GPR116', 'MUC1', 'SERPINB13', 'SNAI2', 'NKX2-1',
+      'KRT6A', 'CD55', 'PKP1', 'SPINK1'
+   )
+
+   actual <- normalizeEnsemblGenes(ensembl)
+
+   expect_equal(rownames(actual), expected)
+})
+
+## Gene Normalization: Probe ID to Gene Name
+
+test_that("normalizing probes converts recognized probe IDs", {
+   probe <- loadCsvData(system.file(file.path('testdata', 'sample-probeid.csv'), package=.PACKAGE_NAME))
+
+   expected <- c(
+      'ACTB', 'RPL39', 'TPT1', 'EEF1A1', 
+      '219795_at', '209800_at', 'POS_A',
+      'TP63', 'KRT14', 'TMC5', 'ANXA8L2', 'KRT5', 'PNMA2',
+      'GPR116', 'MUC1', 'SERPINB13', 'SNAI2', 'NKX2-1',
+      'KRT6A', 'CD55', 'PKP1', 'SPINK1'
+   )
+
+   actual <- normalizeProbeIds(probe)
+
+   expect_equal(rownames(actual), expected)
+})

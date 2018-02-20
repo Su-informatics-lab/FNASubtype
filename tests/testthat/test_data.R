@@ -49,6 +49,12 @@ test_that("annotation data is a 19x5 data frame", {
    expect_true(is.data.frame(anno))
 })
 
+test_that("annotation data columns are all strings", {
+   anno <- getAnnotations()
+
+   expect_true(all(sapply(anno, class) == "character"))
+})
+
 test_that("get housekeeping genes returns correct records", {
    hkg <- getHousekeepingGenes()
 
