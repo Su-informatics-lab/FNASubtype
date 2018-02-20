@@ -14,7 +14,7 @@ probe.id,Ensembl.ID,Gene.Name,Gene.Annotation,Gene.Selection
 201820_at,ENSG00000196352.12,CD55,"201925_s_at|CD55|CD55 molecule, decay accelerating factor for complement (Cromer blood group)",Top A
 209863_s_at,ENSG00000081277.10,PKP1,221854_at|PKP1|Plakophilin 1 (ectodermal dysplasia/skin fragility syndrome),S-tier 2
 213139_at,ENSG00000164266.9,SPINK1,"206239_s_at|SPINK1|Serine peptidase inhibitor, Kazal type 1",Top A
-200801_x_at,,ACTB,"200801_x_at|ACTB|Actin, beta",HK4/6
-208695_s_at,,RPL39,208695_s_at|RPL39|Ribosomal protein L39,HK4/6
-212869_x_at,,TPT1,"212869_x_at|TPT1|Tumor protein, translationally-controlled 1",HK4/6
-213583_x_at,,EEF1A1,213583_x_at|EEF1A1|Eukaryotic translation elongation factor 1 alpha 1,HK4/6
+200801_x_at,ENSG00000075624.12,ACTB,"200801_x_at|ACTB|Actin, beta",HK4/6
+208695_s_at,ENSG00000198918.7,RPL39,208695_s_at|RPL39|Ribosomal protein L39,HK4/6
+212869_x_at,ENSG00000133112.15,TPT1,"212869_x_at|TPT1|Tumor protein, translationally-controlled 1",HK4/6
+213583_x_at,ENSG00000156508.16,EEF1A1,213583_x_at|EEF1A1|Eukaryotic translation elongation factor 1 alpha 1,HK4/6
