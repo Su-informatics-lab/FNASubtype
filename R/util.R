@@ -1,1 +1,1 @@
-.PACKAGE_NAME <- 'fnasubtyping'
+.PACKAGE_NAME <- 'FNASubtype'
